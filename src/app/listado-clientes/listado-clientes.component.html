@@ -1,0 +1,60 @@
+<div class="container mt-3">
+  <h4>Listado de clientes</h4>
+
+  <form accion="">
+    <div class="form-group">
+        <input class="form-control" placeholder="Buscar" type="text" >
+    </div>
+  </form>
+  <div class="row">
+    <div class="col sm-3" *ngFor="let cliente of items">
+      <div class="card">
+        <img class="card-img-top imgCliente"
+          [src]="cliente.ImgUrl" class="card-img-top"
+          alt="...">
+        <div class="card-body">
+            <p>{{cliente.id}}</p>
+          <h5 class="card-title">{{cliente.Nombre}} {{cliente.Apellido}} </h5>
+          <a  class="card-link" [routerLink]="['/AgregarCliente/',[cliente.id] ]"  >Editar</a>
+          <a  class="card-link text-danger">Desactivar</a>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col sm-3">
+        <div class="card">
+            <img class="card-img-top imgCliente"
+            src="https://image.shutterstock.com/image-vector/user-icon-260nw-525551584.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nombre</h5>
+              <a href="#" class="card-link">Editar</a>
+              <a href="#" class="card-link text-danger">Desactivar</a>
+            </div>
+          </div>
+    </div> -->
+    <!-- <div class="col sm-3">
+        <div class="card">
+            <img class="card-img-top imgCliente"
+              src="https://image.shutterstock.com/image-vector/user-icon-260nw-525551584.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nombre</h5>
+              <a href="#" class="card-link">Editar</a>
+              <a href="#" class="card-link text-danger">Desactivar</a>
+            </div>
+          </div>
+    </div> -->
+    <!-- <div class="col sm-3">
+        <div class="card">
+            <img class="card-img-top imgCliente"
+              src="https://image.shutterstock.com/image-vector/user-icon-260nw-525551584.jpg" class="card-img-top"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Nombre</h5>
+              <a href="#" class="card-link">Editar</a>
+              <a href="#" class="card-link text-danger">Desactivar</a>
+            </div>
+          </div>
+    </div> -->
+  </div>
+</div>

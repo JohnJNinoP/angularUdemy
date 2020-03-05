@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="text-center">
+    <img src="assets\module.jpg">
+    <h3>Welcome</h3>
+  </div>
+
+  <form [formGroup]="formlogin">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" placeholder="Ingrece su correo" class="form-control" formControlName="email" id="email"
+        aria-describedby="emailHelp">
+      <div *ngIf="!formlogin.controls['email'].valid && formlogin.controls['email'].dirty" class="alert alert-danger"
+        role="alert">
+        <span *ngIf="formlogin.controls['email'].errors.required">Correo requerido</span>
+        <span *ngIf="formlogin.controls['email'].errors.email">Correo no valido</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password" (keyup.enter)="login()">
+      <div *ngIf="!formlogin.controls['password'].valid && formlogin.controls['password'].dirty"
+        class="alert alert-danger" role="alert">
+        <span *ngIf="formlogin.controls['password'].errors.required">contraseña requerido</span>
+      </div>
+    </div>
+    <button [disabled]="!formlogin.valid" type="submit" (click)="login()" class="btn btn-primary">Submit</button>
+    <div *ngIf="!valid" class="alert alert-warning" role="alert">
+      {{textError}}
+    </div>
+
+    <ngx-spinner bdOpacity=0.9 bdColor="#333" size="large" color="#fff" type="ball-beat" [fullScreen]="true">
+      <p style="color: white"> Loading... </p>
+    </ngx-spinner>
+
+  </form>
+
+
+</div>

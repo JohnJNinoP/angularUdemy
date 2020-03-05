@@ -1,0 +1,45 @@
+<!-- <accordion>
+  <accordion-group heading="Static Header">
+    This content is straight in the template.
+  </accordion-group>
+  <accordion-group heading="Another group">
+    <p>Some content</p>
+  </accordion-group>
+  <accordion-group heading="Another group">
+    <p>Some content</p>
+  </accordion-group>
+  <accordion-group heading="Another group">
+    <p>Some content</p>
+  </accordion-group>
+</accordion> -->
+
+<!-- <div *ngIf="authFa.user | async as user; else showLogin">
+  <h1>Hello {{ user.email }}!</h1>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<ng-template #showLogin>
+  <p>Please login.</p>
+  <button (click)="login()">Login with Google</button>
+</ng-template> -->
+
+<div *ngIf="usuario && !cargando; else showLogin">
+  <!-- <h1>Hello {{ usuario.email }}!</h1>
+  <button (click)="logout()">Logout</button> -->
+  <app-encabezado></app-encabezado>
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #showLogin>
+  <div *ngIf="cargando">
+    <!-- <p>Cargando...</p>-->
+    <div class="text-center">
+    <div class="loadingio-spinner-wedges-8ng2z8zchjm">
+      <div class="ldio-zlwpg5oa6hi">
+      <div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+      </div></div>
+    </div>
+  </div>
+  <!-- <button (click)="login()">Login with Google</button> -->
+  <app-login *ngIf="!cargando"></app-login>
+</ng-template>

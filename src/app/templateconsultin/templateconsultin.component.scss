@@ -1,0 +1,24 @@
+// -webkit-tap-highlight-color: transparent;
+// font: 13px open sans,helvetica neue,Helvetica,Arial,sans-serif;
+// line-height: 1.428571429;
+// color: #717171;
+// box-sizing: border-box;
+// display: block;
+// padding: 12px 0 11px;
+// background: #222;
+// box-shadow: 0 4px 5px 0 rgba(0,0,0,.2);
+// transition: all .4s;
+// position: fixed;
+// top: 0px;
+// z-index: 999;
+// left: 0px;
+// right: 0px;
+// margin: 0px auto;
+
+#stuck_container{
+    -webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all .4s;transition:all .4s}
+    .isStuck{-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all .4s;transition:all .4s;-webkit-box-shadow:0 4px 5px 0 rgba(0,0,0,.2);box-shadow:0 4px 5px 0 rgba(0,0,0,.2)}.isStuck .menuBox{-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all .4s;transition:all .4s}@media(max-width:991px){#stuck_container{position:relative!important;box-shadow:none}.pseudoStickyBlock{height:0!important}}
+
+.container{
+    width: 1170px;
+    }
